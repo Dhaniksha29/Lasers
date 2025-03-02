@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lasers - Information Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" async
+    src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async
+    id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Lasers - Light Amplification by Stimulated Emission of Radiation</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#principles">Principles</a></li>
+            <li><a href="#einstein-coefficients">Einstein Coefficients</a></li>
+            <li><a href="#population-inversion">Population Inversion</a></li>
+            <li><a href="#pumping">Pumping</a></li>
+            <li><a href="#types">Types</a></li>
+            <li><a href="#applications">Applications</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="introduction">
+            <h2>Introduction to Lasers</h2>
+            <p>Laser stands for Light Amplification by Stimulated Emission of Radiation. It is a device that produces a strong, monochromatic, collimated, and highly coherent beam of optical radiation by stimulating electronic, ionic, or molecular transitions to higher energy levels. The first laser was built by Theodore H. Maiman in 1960 using a ruby crystal as the active medium.</p>
+        </section>
+        <section id="properties">
+            <h2>Properties of Lasers</h2>
+            <ul>
+                <li><strong>Monochromatic:</strong> Emission of a single wavelength of light.</li>
+                <li><strong>Coherent:</strong> All photons have a constant phase relationship.</li>
+                <li><strong>Highly Directional:</strong> Produces a very tight, unidirectional beam.</li>
+                <li><strong>High Intensity:</strong> Suitable for applications such as cutting and welding.</li>
+                <li><strong>Tight Focusing:</strong> Can be focused to a few micrometers, useful in surgery and material processing.</li>
+                <li><strong>Spectral Purity:</strong> Extremely small spectral width, making it useful in holography and optical communication.</li>
+            </ul>
+        </section>
+        <section id="principles">
+            <h2>Basic Principles</h2>
+            <p>Laser operation is based on three main principles:</p>
+            <h3>Absorption</h3>
+            <p>Atoms absorb energy, causing electrons to move to a higher energy state.</p>
+            <h3>Spontaneous Emission</h3>
+            <p>Excited atoms return to a lower state randomly, emitting photons incoherently.</p>
+            <h3>Stimulated Emission</h3>
+            <p>When an incident photon of correct frequency interacts with an excited atom, it induces emission of a second photon with identical properties, leading to amplification of light.</p>
+        </section>
+        <section id="einstein-coefficients">
+            <h2>Derivation of Relation Between Einstein's Coefficients</h2>
+            <p>Einstein introduced three coefficients to describe the interaction of atoms with radiation:</p>
+            <ul>
+                <li>\( B_{12} \): Probability coefficient for absorption</li>
+                <li>\( A_{21} \): Probability coefficient for spontaneous emission</li>
+                <li>\( B_{21} \): Probability coefficient for stimulated emission</li>
+            </ul>
+            <h3>Step 1: Transition Probabilities</h3>
+            <p>The rate of absorption per unit volume is given by:</p>
+            <p>\[ W_{12} = B_{12} u(\nu) N_1 \]</p>
+            <p>The rate of spontaneous emission per unit volume is:</p>
+            <p>\[ W_{21}^{sp} = A_{21} N_2 \]</p>
+            <p>The rate of stimulated emission per unit volume is:</p>
+            <p>\[ W_{21}^{st} = B_{21} u(\nu) N_2 \]</p>
+            <p>At thermal equilibrium, the number of upward transitions must equal the number of downward transitions:</p>
+            <p>\[ B_{12} u(\nu) N_1 = A_{21} N_2 + B_{21} u(\nu) N_2 \]</p>
+            <h3>Step 2: Using the Boltzmann Distribution</h3>
+            <p>The population of energy states is given by the Boltzmann distribution:</p>
+            <p>\[ \frac{N_2}{N_1} = e^{-h\nu / kT} \]</p>
+            <h3>Step 3: Using Planck's Radiation Law</h3>
+            <p>The energy density \( u(\nu) \) is given by Planck’s radiation law:</p>
+            <p>\[ u(\nu) = \frac{8\pi h \nu^3}{c^3} \frac{1}{e^{h\nu / kT} - 1} \]</p>
+            <h3>Step 4: Deriving the Relationship</h3>
+            <p>Comparing terms, we obtain:</p>
+            <p>\[ \frac{A_{21}}{B_{21}} = \frac{8\pi h \nu^3}{c^3} \]</p>
+            <p>This equation shows that the probability of spontaneous emission increases as the cube of the frequency.</p>
+            <img src="images/einstein_coefficients.png" alt="Einstein Coefficient Derivation">
+        </section>
+        <section id="population-inversion">
+            <h1>Population Inversion in Lasers</h1>
+            <p>Population inversion is a condition where the number of atoms in a higher energy state (N₂) exceeds the number in a lower energy state (N₁). This condition is essential for laser action.</p>
+            
+            <div class="image-container">
+                <img src="URL_of_Population_Inversion_Illustration.png" alt="Population Inversion Illustration">
+                <p><em>Figure 3: Illustration of Population Inversion in Laser Operation.</em></p>
+            </div>
+            
+            <p>Under normal thermal equilibrium, most atoms reside in the lower energy state (N₁ > N₂), leading to absorption rather than stimulated emission. To achieve laser action, external energy is supplied via pumping, forcing more atoms into the excited state (N₂ > N₁).</p>
+            
+            <p>If <strong>N₁ > N₂</strong>, spontaneous emission dominates, and no laser action occurs. However, when <strong>N₂ > N₁</strong>, stimulated emission prevails, amplifying light and leading to laser generation.</p>
+            
+            <h2>Conditions for Population Inversion</h2>
+            <ul>
+                <li>There must be an external energy source to excite atoms (pumping).</li>
+                <li>Atoms should stay in the excited state long enough to allow stimulated emission.</li>
+                <li>The system should avoid spontaneous emission domination.</li>
+            </ul>
+        </section>
+        <section id="pumping">
+            <h1>Pumping in Lasers</h1>
+        <p>The process of moving the atoms from their ground state to an excited state is called <strong>pumping</strong>. The objective is to obtain a non-thermal equilibrium and achieve population inversion.</p>
+        
+        <h2>Types of Pumping</h2>
+        <h3>Optical Pumping</h3>
+        <p>In optical pumping, atoms are excited by bombarding them with photons. An example of a laser using optical pumping is the <strong>Ruby Laser</strong>.</p>
+        
+        <h3>Electrical Pumping</h3>
+        <p>In electrical pumping, atoms are excited by electron collisions in a discharge tube. An example of a laser using electrical pumping is the <strong>Helium-Neon (He-Ne) Laser</strong>.</p>
+        
+        <h2>Continuous Wave and Pulsed Lasers</h2>
+        <ul>
+            <li>Lasers that maintain a population inversion indefinitely produce continuous output and are called <strong>Continuous Wave (CW) Lasers</strong>.</li>
+            <li>Lasers that have a short-lived population inversion produce pulsed output and are called <strong>Pulsed Lasers</strong>.</li>
+        </ul>
+        </section>
+        <section id="types">
+            <h1>He-Ne and Ruby Lasers</h1>
+        
+            <h2>He-Ne Laser (Four Level Laser)</h2>
+            <p>The Helium-Neon (He-Ne) laser was the first continuous laser, invented by Ali Javan in 1961. It consists of a mixture of helium and neon gases and operates in continuous wave (CW) mode.</p>
+            
+            <h3>Construction of He-Ne Laser</h3>
+            <ul>
+                <li><strong>Active Medium:</strong> A gas mixture of helium and neon in a 5:1 to 20:1 ratio contained in a glass tube.</li>
+                <li><strong>Pumping Mechanism:</strong> Excitation occurs via electrical discharge of around 1000 volts.</li>
+                <li><strong>Resonant Cavity:</strong> Consists of a discharge tube with high-reflecting mirrors at both ends.</li>
+            </ul>
+            <div class="image-container">
+                <img src="URL_of_HeNe_Laser_Construction_and_Energy_Levels.png" alt="Helium-Neon Laser Construction and Energy Levels">
+                <p><em>Figure 2: Construction and Energy Levels of a Helium-Neon Laser.</em></p>
+            </div>
+            
+            <h3>Working of He-Ne Laser</h3>
+            <p>When power is switched on, electrons excite helium atoms, which transfer energy to neon atoms via collisions. The excited neon atoms undergo stimulated emission, producing a coherent laser beam at 632.8 nm (red light). The beam is amplified through multiple reflections inside the cavity and exits through a partially silvered mirror.</p>
+            
+            <h2>Ruby Laser (Three Level Laser)</h2>
+            <p>The Ruby laser, invented by Theodore Maiman in 1960, is a solid-state laser that uses a synthetic ruby crystal as its gain medium.</p>
+            
+            <h3>Construction of Ruby Laser</h3>
+            <ul>
+                <li><strong>Active Medium:</strong> A cylindrical ruby rod (Al₂O₃ doped with Cr³⁺ ions).</li>
+                <li><strong>Pumping Source:</strong> A xenon flash lamp excites chromium ions to higher energy states.</li>
+                <li><strong>Optical Cavity:</strong> The rod is placed between two mirrors (one fully reflective, one partially reflective).</li>
+            </ul>
+            <div class="image-container">
+                <img src="URL_of_Ruby_Laser_Energy_Level_Diagram.png" alt="Ruby Laser Energy Level Diagram">
+                <p><em>Figure 1: Energy Level Diagram of a Ruby Laser.</em></p>
+            </div>
+            
+            <h3>Working of Ruby Laser</h3>
+            <p>Optical pumping excites Cr³⁺ ions to a higher energy state. These ions transition to a metastable state before undergoing stimulated emission, producing a pulsed laser beam at 694.3 nm (red light). The emitted photons reflect within the optical cavity, amplifying the laser output.</p>
+        </section>
+        <section id="applications">
+            <h2>Applications of Lasers</h2>
+            <ul>
+                <li><strong>Medical:</strong> Eye surgery, dental treatment, skin therapy.</li>
+                <li><strong>Industrial:</strong> Cutting, welding, material processing.</li>
+                <li><strong>Scientific:</strong> Holography, spectroscopy, optical communication.</li>
+                <li><strong>Military:</strong> Targeting, missile guidance, defense systems.</li>
+                <li><strong>Consumer Electronics:</strong> CD/DVD players, laser printers, bar code scanners.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Laser Information Portal</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
